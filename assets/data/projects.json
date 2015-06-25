@@ -1,0 +1,23 @@
+{ "projects" : [
+  {
+    "name" : "Applause Analytics" 
+    "sub" : "initial designs",
+    "client" : "Applause",
+    "id"   : "applause",
+    "img"  : "applause.jpg",
+    "when" : "Fall 2012",
+    "shortDesc" : "<p>Applause is an analytics tool that offers a comprehensive data about how users really feel about the app. Applause allows its users to build and curate collections of apps they like or want to watch. We designed a simple and clean interface to house the data visualizations we created to cover multiple versions of the app. The idea is to be able to watch as an application grows and evolves over time as observed by its users. Applause was named &quotMost Insightful Big Data and Analytics Innovation&quot; at the 2013 MITX awards.</p>",
+    "desc" : "<p></p>"
+    "shots" : [{}]
+  }, {
+    "name" : "Applause Analytics" 
+    "sub" : "initial designs",
+    "client" : "Applause",
+    "id"   : "applause",
+    "img"  : "applause.jpg",
+    "when" : "Fall 2012",
+    "shortDesc" : "<p>Applause is an analytics tool that offers a comprehensive data about how users really feel about the app. Applause allows its users to build and curate collections of apps they like or want to watch. We designed a simple and clean interface to house the data visualizations we created to cover multiple versions of the app. The idea is to be able to watch as an application grows and evolves over time as observed by its users. Applause was named &quotMost Insightful Big Data and Analytics Innovation&quot; at the 2013 MITX awards.</p>",
+    "desc" : "<p></p>"
+    "shots" : [{}]
+  }
+]}

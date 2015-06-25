@@ -4,7 +4,7 @@ $(document).ready(function() {
       navItems: [
         {
           'name' : 'Work',
-          'url'  : './#work'
+          'url'  : './work'
         }, {
           'name' : 'Who Am I',
           'url'  : './whoami.html'
@@ -27,10 +27,10 @@ $(document).ready(function() {
     var currentYear = (new Date).getFullYear();
     $('#currentYear').text(currentYear); 
 
-    //cards
-    $.getJSON('./assets/data/projects.json', function(data) {
+    //projects
+   /* $.getJSON('./assets/data/projects.json', function(data) {
       var project_tpl = $('#projectTpl').html();
       var html = Mustache.to_html(project_tpl, data);
       $('#projects').html(html);
-    });
+    });*/
 });

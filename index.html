@@ -24,6 +24,24 @@
 		</div>
 	</section>
 
+	<section id="projects">
+		<script id="projectTpl" type="text/template">
+			{{#projects}}
+				<div class="project">
+					<div class="container">
+						<div class="project-img">
+						<img src="./assets/images/{{imgages}}" alt="{{name}}" class="scale-with-grid" />
+						</div>
+						<div class="project-desc">
+							<h3>{{name}}</h3>
+							{{{desc}}}
+						</div>
+					</div>
+				</div>
+			{{/projects}}
+		</script>
+	</section>
+
 	<section id="footer">
 		<div class="container">
 			<p>Copyright &copy; <span id="currentYear"></span></p>

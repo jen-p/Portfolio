@@ -28,9 +28,9 @@ $(document).ready(function() {
     $('#currentYear').text(currentYear); 
 
     //projects
-   /* $.getJSON('./assets/data/projects.json', function(data) {
+    $.getJSON('./assets/data/projects.json', function(data) {
       var project_tpl = $('#projectTpl').html();
       var html = Mustache.to_html(project_tpl, data);
       $('#projects').html(html);
-    });*/
+    });
 });

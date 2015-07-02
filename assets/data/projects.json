@@ -1,23 +1,111 @@
 { "projects" : [
   {
-    "name" : "Applause Analytics" 
-    "sub" : "initial designs",
-    "client" : "Applause",
-    "id"   : "applause",
-    "img"  : "applause.jpg",
-    "when" : "Fall 2012",
-    "shortDesc" : "<p>Applause is an analytics tool that offers a comprehensive data about how users really feel about the app. Applause allows its users to build and curate collections of apps they like or want to watch. We designed a simple and clean interface to house the data visualizations we created to cover multiple versions of the app. The idea is to be able to watch as an application grows and evolves over time as observed by its users. Applause was named &quotMost Insightful Big Data and Analytics Innovation&quot; at the 2013 MITX awards.</p>",
-    "desc" : "<p></p>"
-    "shots" : [{}]
+    "name" : "Care Cards", 
+    "sub" : "",
+    "client" : "Involution Studios",
+    "id"   : "care-cards",
+    "images"  : "carecards.jpg",
+    "when" : "Summer 2015",
+    "desc" : "<p></p>",
+    "post" : true
   }, {
-    "name" : "Applause Analytics" 
+    "name" : "Smashfly", 
+    "sub" : "",
+    "client" : "SmashFly",
+    "id"   : "smashfly",
+    "images"  : "smashfly.png",
+    "when" : "Fall 2014",
+    "desc" : "<p></p>",
+    "post" : true
+  }, {
+    "name" : "Partners Insight", 
+    "sub" : "",
+    "client" : "Partners Health Systems",
+    "id"   : "partners",
+    "images"  : "partners.png",
+    "when" : "Nov 2013 - Aug 2014",
+    "desc" : "<p></p>",
+    "post" : false
+  }, {
+    "name" : "Inspired EHRs", 
+    "sub" : "Designing for Clinicians",
+    "client" : "Jeff Belden, MD, et al, at the University of Missouri",
+    "id"   : "inspired-ehrs",
+    "images"  : "inspiredehrs.jpg",
+    "when" : "Jul 2013 - Jul 2014",
+    "desc" : "<p></p>",
+    "post" : true
+  }, {
+    "name" : "Happtique", 
+    "sub" : "",
+    "client" : "Happtique",
+    "id"   : "happtique",
+    "images"  : "happtique.png",
+    "when" : "Summer 2013",
+    "desc" : "<p></p>",
+    "post" : true
+  }, {
+    "name" : "MarketSight", 
+    "sub" : "",
+    "client" : "MarketSight",
+    "id"   : "marketsight",
+    "images"  : "marketsight.png",
+    "when" : "Spring 2013",
+    "desc" : "<p></p>",
+    "post" : true
+  }, {
+    "name" : "uTest customer facing app", 
+    "sub" : "initial designs",
+    "client" : "Applause",
+    "id"   : "utest-neptune",
+    "images"  : "uTest-neptune.png",
+    "when" : "Winter 2013",
+    "desc" : "<p>uTest's customer-facing application is a great way for app developers and product managers to get their applications out for testing as quickly as possible and with in-the-wild results.</p>",
+    "post" : true
+  }, {
+    "name" : "Applause Analytics", 
     "sub" : "initial designs",
     "client" : "Applause",
     "id"   : "applause",
-    "img"  : "applause.jpg",
+    "images"  : "applause.png",
     "when" : "Fall 2012",
-    "shortDesc" : "<p>Applause is an analytics tool that offers a comprehensive data about how users really feel about the app. Applause allows its users to build and curate collections of apps they like or want to watch. We designed a simple and clean interface to house the data visualizations we created to cover multiple versions of the app. The idea is to be able to watch as an application grows and evolves over time as observed by its users. Applause was named &quotMost Insightful Big Data and Analytics Innovation&quot; at the 2013 MITX awards.</p>",
-    "desc" : "<p></p>"
-    "shots" : [{}]
+    "desc" : "<p>Applause is an analytics tool that offers a comprehensive data about how users really feel about the app. Applause allows its users to build and curate collections of apps they like or want to watch. We designed a simple and clean interface to house the data visualizations we created to cover multiple versions of the app. The idea is to be able to watch as an application grows and evolves over time as observed by its users. Applause was named &quotMost Insightful Big Data and Analytics Innovation&quot; at the 2013 MITX awards.</p>",
+    "post" : true
+  }, {
+    "name" : "uTest tester facing app", 
+    "sub" : "initial designs",
+    "client" : "Applause",
+    "id"   : "utest",
+    "images"  : "uTest.jpg",
+    "when" : "Summer 2012",
+    "desc" : "<p>uTest's tester-facing application is a part of their crowd-sourcing service for in-the-wild testing for software and applications.</p><p>I made a close examination of their application and, taking into account how users would naturally interact with it, designed a clearer workspace for the testers.</p>",
+    "post" : true
+  }, {
+    "name" : "Get Ready @ SDL", 
+    "sub" : " ",
+    "client" : "SDL",
+    "id"   : "sdl",
+    "images"  : "sdl.png",
+    "when" : "Spring 2012",
+    "desc" : "<p>Get Ready @ SDL was a vehicle for SDL to feature an upcoming service that would both help make learning languages easier and allow translators to earn money from their translations.</p>",
+    "post" : false
+  }, {
+    "name" : "Extole", 
+    "sub" : " ",
+    "client" : "Extole",
+    "id"   : "extole",
+    "images"  : "extole.png",
+    "when" : "Winter 2012",
+    "desc" : "<p>A dashboard to digitize reports on social analytics, providing on-demand data on progressions of marketing campaigns.</p>",
+    "post" : true
+  }, {
+    "name"   : "Design Axioms Website", 
+    "sub"    : " ",
+    "client" : "Involution Studios",
+    "id"     : "design-axioms",
+    "images" : "designaxioms.png",
+    "when"   : "Fall 2011",
+    "desc"   : "<p>Developed the showcase for Involution Studio's Design Axioms card deck which encapsulates the primary principles for good design..</p>",
+    "post"   : true
   }
 ]}

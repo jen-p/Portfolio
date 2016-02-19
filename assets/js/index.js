@@ -8,10 +8,10 @@ $(document).ready(function() {
         }, {
           'name' : 'Who Am I',
           'url'  : './whoami.html'
-        }, {
+        }/*, {
           'name' : 'Blog',
           'url'  : '#'
-        }, {
+        }*/, {
           'name' : 'Contact',
           'url'  : 'mailto:me@jenniferpatel.com'
         } 

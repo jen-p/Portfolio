@@ -16,8 +16,8 @@
         height = null,
         rowSeperatorsColor = null,
         backgroundColor = null,
-        tickFormat = { format: d3.time.format("%I %p"),
-          tickTime: d3.time.hours,
+        tickFormat = { format: d3.time.format("%Y %M"),
+          tickTime: d3.time.month,
           tickInterval: 1,
           tickSize: 6 },
         colorCycle = d3.scale.category20(),
@@ -166,25 +166,6 @@
         maxTime = 0;
 
       setWidth();
-
-      // check if the user wants relative time
-      // if so, substract the first timestamp from each subsequent timestamps
-      if(timeIsRelative){
-        g.each(function (d, i) {
-          d.forEach(function (datum, index) {
-            datum.times.forEach(function (time, j) {
-              if(index === 0 && j === 0){
-                originTime = time.starting_time;               //Store the timestamp that will serve as origin
-                time.starting_time = 0;                        //Set the origin
-                time.ending_time = time.ending_time - originTime;     //Store the relative time (millis)
-              }else{
-                time.starting_time = time.starting_time - originTime;
-                time.ending_time = time.ending_time - originTime;
-              }
-            });
-          });
-        });
-      }
 
       // check how many stacks we're gonna need
       // do this here so that we can draw the axis before the graph

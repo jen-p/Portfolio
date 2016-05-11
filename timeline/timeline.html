@@ -23,40 +23,42 @@
 		var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];				//Array to display the current month on the TodayLine
 		
 		//Data array for the timeline
-		data = [{"label": "glytec website", "dates":[{"startdate": new Date(2016,3,14), "enddate": new Date(2016,5,14), "strength": 16, "dosage": 28, "dosage2": "", "dosage3": " u"}]},
-			{"label": "glytec", "dates":[{"startdate": new Date(2016,2,1), "enddate": new Date(2016,3,14), "strength": 16, "dosage": 40, "dosage2": "", "dosage3": " mg"}, {"startdate": new Date(2016,3,14), "enddate": new Date(2016,4,7), "strength": 8, "dosage": 40, "dosage2": "", "dosage3": " mg"}]},
-			{"label": "zika", "dates":[{"startdate": new Date(2016,1,21), "enddate": new Date(2016,1,31), "strength": 16, "dosage": 300, "dosage2": " bid", "dosage3": " mg"}, {"startdate": new Date(2012,8,25), "enddate": new Date(2012,11,28), "strength": 4, "dosage": 300, "dosage2": " tid", "dosage3": " mg"}, {"startdate": new Date(2012,11,28), "enddate": new Date(2013,8,19), "strength": 8, "dosage":600, "dosage2": " bid", "dosage3": " mg"}]},
-			{"label": "CureForward", "dates":[{"startdate": new Date(2012,2,15), "enddate": new Date(2013,8,19), "strength": 1, "dosage": 5, "dosage2": "", "dosage3": " mg"}]},
-			{"label": "Partners - InfoEd", "dates":[{"startdate": new Date(2012,2,05), "enddate": new Date(2013,0,30), "strength": 8, "dosage": 50, "dosage2": "", "dosage3": " mg"}, {"startdate": new Date(2013,0,30), "enddate": new Date(2013,8,19), "strength": 16, "dosage": 100, "dosage2": "", "dosage3": " mg"}]},
-			{"label": "IMS", "dates":[{"startdate": new Date(2015,7,1), "enddate": new Date(2015,9,7), "strength": 16},
-				{"startdate": new Date(2015,9,7), "enddate": new Date(2015,9,21), "strength": 8},
-				{"startdate": new Date(2015,9,21), "enddate": new Date(2015,12,18), "strength": 16}]},
-			{"label": "Care Cards", "dates":[{"startdate": new Date(2015,6,4), "enddate": new Date(2015,6,21), "strength": 16]},
-			{"label": "SmashFly", "dates":[{"startdate": new Date(2014,6,24), "enddate": new Date(2014,11,18), "strength": 16}]},
-			{"label": "Partners Insight", "dates":[{"startdate": new Date(2013,11,14), "enddate": new Date(2014,4,7), "strength": 16}, 
-				{"startdate": new Date(2014,5,1), "enddate": new Date(2014,8,7), "strength": 16}, 
-				{"startdate": new Date(2014,8,24), "enddate": new Date(2014,10,1), "strength": 8}, 
-				{"startdate": new Date(2014,10,1), "enddate": new Date(2015,5,24), "strength": 16},
-				{"startdate": new Date(2015,5,24), "enddate": new Date(2015,7,1), "strength": 8}]},
-			{"label": "Inspired EHRs", "dates":[{"startdate": new Date(2013,7,7), "enddate": new Date(2013,11,14), "strength": 16}, 
-				{"startdate": new Date(2013,11,14), "enddate": new Date(2014,7,7), "strength": 8},
-				{"startdate": new Date(2014,8,24), "enddate": new Date(2014,10,7), "strength": 8}]},
-			{"label": "Happtique", "dates":[{"startdate": new Date(2013,6,18), "enddate": new Date(2013,7,7), "strength": 8}]},
-			{"label": "Emerging Tech website", "dates":[{"startdate": new Date(2013,6,7), "enddate": new Date(2013,8,1), "strength": 8}]},
-			{"label": "MarketSight", "dates":[{"startdate": new Date(2013,3,1), "enddate": new Date(2013,6,7), "strength": 16}]},
-			{"label": "QuadraMed", "dates":[{"startdate": new Date(2013,2,1), "enddate": new Date(2013,3,1), "strength": 8}]},
-			{"label": "Strength Matters", "dates":[{"startdate": new Date(2013,2,1), "enddate": new Date(2013,3,1), "strength": 8}]},
-			{"label": "uTest - Neptune", "dates":[{"startdate": new Date(2012,10,22), "enddate": new Date(2013,2,1), "strength": 16}]},
-			{"label": "uTest - Tester App", "dates":[{"startdate": new Date(2012,6,1), "enddate": new Date(2012,9,12), "strength": 16}]},
-			{"label": "uTest - Applause", "dates":[{"startdate": new Date(2012,4,24), "enddate": new Date(2012,6,7), "strength": 8}, 
-				{"startdate": new Date(2012,9,24), "enddate": new Date(2012,11,7), "strength": 16, "dosage": 250, "dosage2": "", "dosage3": " mg"}]},
-			{"label": "Extole", "dates":[{"startdate": new Date(2012,4,1), "enddate": new Date(2012,5,1), "strength": 8}]},
-			{"label": "Ten Fourteen", "dates":[{"startdate": new Date(2012,3,1), "enddate": new Date(2012,4,12), "strength": 8}]},
-			{"label": "SDL", "dates":[{"startdate": new Date(2012,2,15), "enddate": new Date(2012,4,25), "strength": 8}]},
-			{"label": "Facio", "dates":[{"startdate": new Date(2011,10,7), "enddate": new Date(2012,2,15), "strength": 16}, 
-				{"startdate": new Date(2012,2,15), "enddate": new Date(2012,4,1), "strength": 8}]},
-			{"label": "Design Axioms", "dates":[{"startdate": new Date(2011,9,12), "enddate": new Date(2011,10,10), "strength": 8}]},
-			{"label": "PTC Wiki", "dates":[{"startdate": new Date(2011,9,12), "enddate": new Date(2011,10,7), "strength": 8}]}
+		data = [{"label": "Glytec website", "color": "#063f6c", "dates":[{"startdate": new Date(2016,3,14), "enddate": new Date(2016,5,14), "effort": 1}]},
+			{"label": "Glytec Glucommander", "color": "#063f6c", "dates":[{"startdate": new Date(2016,2,1), "enddate": new Date(2016,3,14), "effort": 1}, {"startdate": new Date(2016,3,14), "enddate": new Date(2016,4,7), "effort": .5}]},
+			{"label": "Zika", "color": "#8f2741", "dates":[{"startdate": new Date(2016,1,21), "enddate": new Date(2016,1,31), "effort": 1}]},
+			{"label": "CureForward", "color": "#ff8212", "dates":[{"startdate": new Date(2016,1,12), "enddate": new Date(2016,1,20), "effort": 1}]},
+			{"label": "Partners InfoEd", "color": "#2c4e81", "dates":[{"startdate": new Date(2015,10,1), "enddate": new Date(2015,12,18), "effort": .5}]},
+			{"label": "IMS", "color": "#002868", "dates":[{"startdate": new Date(2015,7,1), "enddate": new Date(2015,9,7), "effort": 1},
+				{"startdate": new Date(2015,9,7), "enddate": new Date(2015,9,21), "effort": .5},
+				{"startdate": new Date(2015,9,21), "enddate": new Date(2015,12,18 ), "effort": 1}]},
+			{"label": "Care Cards", "color": "#4791ba", "dates":[{"startdate": new Date(2015,6,7), "enddate": new Date(2015,6,21), "effort": 1}]},
+			{"label": "SmashFly", "color": "#4a91d3", "dates":[{"startdate": new Date(2014,6,24), "enddate": new Date(2014,11,18), "effort": 1}]},
+			{"label": "Partners Insight", "color": "#2c4e81", "dates":[{"startdate": new Date(2013,11,14), "enddate": new Date(2014,4,7), "effort": 1}, 
+				{"startdate": new Date(2014,5,1), "enddate": new Date(2014,8,7), "effort": 1}, 
+				{"startdate": new Date(2014,8,24), "enddate": new Date(2014,10,1), "effort": .5}, 
+				{"startdate": new Date(2014,10,1), "enddate": new Date(2015,5,24), "effort": 1},
+				{"startdate": new Date(2015,5,24), "enddate": new Date(2015,7,1), "effort": .5},
+				{"startdate": new Date(2015,11,1), "enddate": new Date(2015,11,18), "effort": .5},
+				{"startdate": new Date(2016,1,1), "enddate": new Date(2016,1,12), "effort": 1}]},
+			{"label": "Inspired EHRs", "color": "#6ea5d7", "dates":[{"startdate": new Date(2013,7,7), "enddate": new Date(2013,11,14), "effort": 1}, 
+				{"startdate": new Date(2013,11,14), "enddate": new Date(2014,7,7), "effort": .5},
+				{"startdate": new Date(2014,8,24), "enddate": new Date(2014,10,7), "effort": .5}]},
+			{"label": "Happtique", "color": "#09a8d8", "dates":[{"startdate": new Date(2013,6,18), "enddate": new Date(2013,7,7), "effort": .5}]},
+			{"label": "Emerging Tech website", "color": "#7474a4", "dates":[{"startdate": new Date(2013,6,7), "enddate": new Date(2013,8,1), "effort": .5}]},
+			{"label": "MarketSight", "color": "#1a529e", "dates":[{"startdate": new Date(2013,3,1), "enddate": new Date(2013,6,7), "effort": 1}]},
+			{"label": "QuadraMed", "color": "#dd5959", "dates":[{"startdate": new Date(2013,2,1), "enddate": new Date(2013,3,1), "effort": .5}]},
+			{"label": "Strength Matters", "color": "#b8ccb6", "dates":[{"startdate": new Date(2013,2,1), "enddate": new Date(2013,3,1), "effort": .5}]},
+			{"label": "uTest - Neptune", "color": "#0082b2", "dates":[{"startdate": new Date(2012,10,22), "enddate": new Date(2013,2,1), "effort": 1}]},
+			{"label": "uTest - Tester App", "color": "#488ab3", "dates":[{"startdate": new Date(2012,6,1), "enddate": new Date(2012,9,12), "effort": 1}]},
+			{"label": "uTest - Applause", "color": "#f05519", "dates":[{"startdate": new Date(2012,4,24), "enddate": new Date(2012,6,7), "effort": .5}, 
+				{"startdate": new Date(2012,9,24), "enddate": new Date(2012,11,7), "effort": 1}]},
+			{"label": "Extole", "color": "#ac111a", "dates":[{"startdate": new Date(2012,4,1), "enddate": new Date(2012,5,1), "effort": .5}]},
+			{"label": "Ten Fourteen", "color": "#81c6c8", "dates":[{"startdate": new Date(2012,3,1), "enddate": new Date(2012,4,12), "effort": .5}]},
+			{"label": "SDL", "color": "#027497", "dates":[{"startdate": new Date(2012,2,15), "enddate": new Date(2012,4,25), "effort": .5}]},
+			{"label": "Facio", "colo r": "#d3ddd8", "dates":[{"startdate": new Date(2011,10,7), "enddate": new Date(2012,2,15), "effort": 1}, 
+				{"startdate": new Date(2012,2,15), "enddate": new Date(2012,4,1), "effort": 8}]},
+			{"label": "Design Axioms", "color": "#bf4848", "dates":[{"startdate": new Date(2011,9,12), "enddate": new Date(2011,10,10), "effort": .5}]},
+			{"label": "PTC Wiki", "color": "rgb(147,211,165)", "dates":[{"startdate": new Date(2011,9,12), "enddate": new Date(2011,10,7), "effort": .5}]}
 			];
 		
 		x=d3.time.scale().range([126, w + 160]);		//X-axis 
@@ -202,20 +204,8 @@
 				.classed("timeBars", true)
 				.attr("y", -10)
 				.attr("height", 20)
-				//.attr("stroke", "white")
-				.attr("fill", function(d){
-					if(d.strength==1){
-						return "rgba(47,47,47,.2)";
-					}else if(d.strength==4){
-						return "rgba(47,47,47,.35)";
-					}else if(d.strength == 8){
-						return "rgba(47,47,47,.6)";
-					}else if(d.strength == 16){
-						return "rgba(47,47,47,1)";
-					}else{
-						return "rgba(195,0,0,1)";
-					}
-				})
+				.attr("fill", function(d){ return "'" + d.color + "'";})
+				.attr("opacity",  function(d){ return d.effort;})
 				.attr("cursor", "move")
 				.call(zoom);
 				
@@ -424,13 +414,13 @@
 					//.attr("height", 3)
 					//.attr("stroke", "white")
 					.attr("fill", function(d){
-						if(d.strength==1){
+						if(d.effort==1){
 							return "rgba(47,47,47,.2)";
-						}else if(d.strength==4){
+						}else if(d.effort==4){
 							return "rgba(47,47,47,.35)";
-						}else if(d.strength == 8){
+						}else if(d.effort == 8){
 							return "rgba(47,47,47,.6)";
-						}else if(d.strength == 16){
+						}else if(d.effort == 16){
 							return "rgba(47,47,47,1)";
 						}else{
 							return "rgba(195,0,0,1)";

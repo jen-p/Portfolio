@@ -204,7 +204,7 @@
 				.classed("timeBars", true)
 				.attr("y", -10)
 				.attr("height", 20)
-				.attr("fill", function(d){ return "'" + d.color + "'";})
+				.attr("fill", function(d){ return d.color;})
 				.attr("opacity",  function(d){ return d.effort;})
 				.attr("cursor", "move")
 				.call(zoom);
@@ -218,7 +218,7 @@
 					.attr("fill", "white")
 					.attr("text-anchor", "end")
 					.attr("font-size", "11px")
-					.text(function(d){return d.dosage + d.dosage2;});	
+					.text(function(d){return d.label;});	
 		});
 		
 		pane.call(zoom);

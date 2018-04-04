@@ -167,12 +167,12 @@ function renderTimeLine(){
 		group = d3.select(this);
 		color = d3.rgb(d.color);
 	 
-		barGroup = group.append("g").classed("barGroup", true); //Appends timeline bars and text to the bars		
+		barGroup = group.append("g").attr("class","barGroup"); //Appends timeline bars and text to the bars		
 		barGroup.selectAll(".timeBars")
 			.data(d.dates)
 			.enter()
 			.append("rect")
-			.classed("timeBars", true)
+			.attr("class","timeBars")
 			.attr("y", -10)
 			.attr("height", 20)
 			.attr("fill", color)
@@ -181,14 +181,18 @@ function renderTimeLine(){
 
 		timeBars = barGroup.selectAll(".timeBars");
 
-		timeBars.append("text")
-			.classed("timeBarstext", true)
-			.attr("x", x)
-			.attr("y", y(i))
-			.attr("fill", "white")
-			.attr("text-anchor", "start")
-			.attr("font-size", "12px")
-			.text(function(d){return d.label;});	
+		barGroup.selectAll(".timeBarstext")
+			.data(d.dates)
+			.enter()
+			.append("text")
+			.attr("class", "timeBarstext")
+			.attr("y", 4)
+			.attr("x", d.startdate)
+			.attr("height", 100)
+			.attr("fill", "rgba(67,67,67,.5)")
+			.attr("text-anchor", "end")
+			.attr("font-size","12px")
+			.text(d.label);
 	});
 	
 	pane.call(zoom);
@@ -196,7 +200,7 @@ function renderTimeLine(){
 	var month = currDate.getMonth();
 	var newDate = monthNames[month] + " " + day; //Stores the current date and month 
    
-	//Append the drug names on the y-axis
+	//Append the labels on the y-axis
 	var yAxisLabel = chart.append("g");
 	
 	yAxisLabel.append("rect")

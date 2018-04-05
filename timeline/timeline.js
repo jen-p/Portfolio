@@ -1,11 +1,12 @@
 
 function renderTimeLine(){
 	var group, barGroup, context;
-		
+	
 	var m = [80, 160, 0, 80]; // top right bottom left
 	var m2 = [570, 160, 20, 80];
 	var	w = 1200 - m[1] - m[3]; // width    
 	var h = 700 - m[0] - m[2]; // height
+	//var h = 100 * data.length;
 	var h2 = 700 - m2[0] - m2[2];
 
 	var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -126,10 +127,12 @@ function renderTimeLine(){
 	
 	pane.append("rect")
 		.attr("class", "pane")
-		.attr("x", 126)
-		.attr("width", w + 50)
+		//.attr("x", 126) //Use if you want the yaxis
+		.attr("x", 0)
+		//.attr("width", w + 50) //Use if you want the yaxis
+		.attr("width", w + 160)
 		.attr("y", 55)
-		.attr("height", h - 80)
+		.attr("height", h)
 		.attr("stroke", "#EEEEEE")
 		.attr("stroke-width", 1);
 
@@ -154,7 +157,8 @@ function renderTimeLine(){
 
 	//Append the x-axis to the chart
 	chart.append("g").attr("class", "x axis")
-		.attr("transform", "translate(-20, "+ (h-25) + ")")
+		//.attr("transform", "translate(-20, "+ (h-25) + ")") //Display date axis above chart
+		.attr("transform", "translate(-20, "+ (h) + ")")
 		.attr("font-size", "15px")
 		.call(xaxis);
 
@@ -166,6 +170,8 @@ function renderTimeLine(){
 	projects.each(function(d, i){
 		group = d3.select(this);
 		color = d3.rgb(d.color);
+		barY = 20;
+		barHeight = 20;
 	 
 		barGroup = group.append("g").attr("class","barGroup"); //Appends timeline bars and text to the bars		
 		barGroup.selectAll(".timeBars")
@@ -173,23 +179,19 @@ function renderTimeLine(){
 			.enter()
 			.append("rect")
 			.attr("class","timeBars")
-			.attr("y", -10)
-			.attr("height", 20)
+			.attr("y", barY)
+			.attr("height", barHeight)
 			.attr("fill", color)
 			.attr("opacity",  function(d){ return d.effort;})
 			.call(zoom);
 
-		timeBars = barGroup.selectAll(".timeBars");
-
 		barGroup.selectAll(".timeBarstext")
-			.data(d.dates)
+			.data(d.dates) //TODO: select just the last date ??
 			.enter()
 			.append("text")
 			.attr("class", "timeBarstext")
-			.attr("y", 4)
-			.attr("x", d.startdate)
+			.attr("y", barY+14)
 			.attr("height", 100)
-			.attr("fill", "rgba(67,67,67,.5)")
 			.attr("text-anchor", "end")
 			.attr("font-size","12px")
 			.text(d.label);
@@ -200,8 +202,8 @@ function renderTimeLine(){
 	var month = currDate.getMonth();
 	var newDate = monthNames[month] + " " + day; //Stores the current date and month 
    
-	//Append the labels on the y-axis
-	var yAxisLabel = chart.append("g");
+	//Uncomment to append y-axis with labels
+	/*var yAxisLabel = chart.append("g");
 	
 	yAxisLabel.append("rect")
 			.attr("class", "yAxisRect")
@@ -243,7 +245,7 @@ function renderTimeLine(){
 			.attr("transform", "translate(-20, 50)")
 			.attr("fill", "rgba(67,67,67,.5)")
 			.attr("font-size", "12px")
-			.call(xaxis3);
+			.call(xaxis3);*/
 	
 	//A vertical scroll bar to scroll the chart vertically
 	scrollBar = chart.append("g");			
@@ -260,10 +262,9 @@ function renderTimeLine(){
 			.attr("cursor", "move")
 			.call(vDrag);
 
-	//Variable for mini version of the timeline to allow brushing to select
-	//region one wants to view
+	//Variable for mini version of the timeline to allow timeframe selection and navigation
 	context = chart.append("g")
-				.attr("transform", "translate(0 , " + (m2[0]+ 30) + ")");
+				//.attr("transform", "translate(0 , " + (m2[0]+ 30) + ")"); //displays the mini timeline below chart
 	
 	//Appends a rectangular region to display the mini timeline			
 	context.append("rect")
@@ -271,22 +272,21 @@ function renderTimeLine(){
 			.attr("width", w + 40)
 			.attr("y", -5)
 			.attr("height", 60)
-			.attr("stroke", "#d9d9d9")
-			.attr("stroke-width", .75)
-			.attr("fill", "#ededed");
+			.attr("fill", "#fff");
 
-	context.append("rect")
-		.attr("x", 115)
-		.attr("y", 55)
-		.attr("width", w+100)
-		.attr("height", h2)
-		.attr("fill", "white");
+	//White area to cover up chart overflow when mini timeline is below chart
+	// context.append("rect")
+	// 	.attr("x", 115)
+	// 	.attr("y", 55)
+	// 	.attr("width", w+100)
+	// 	.attr("height", h2)
+	// 	.attr("fill", "white");
 
 	//Appends x-axis to the context area		
 	context.append("g")
 		.attr("class", "x axis")
 		.attr("fill", "rgba(67,67,67,.5)")
-		.attr("transform", "translate(0, " + (h2-55) + ")")
+		//.attr("transform", "translate(0, " + (h2-55) + ")") //displays axis below mini timeline
 		.call(xaxis2);
 	
 	//Creates the timeline bars in the context area	
@@ -365,8 +365,8 @@ function renderTimeLine(){
 			group.select(".barGroup").selectAll(".timeBarstext").each(function(d){
 				d3.select(this).attr("x", function(d){return x(d.startdate)+(x(d.enddate)-x(d.startdate))-8;})
 					.attr("fill", function(d){
-						if((x(d.enddate) - x(d.startdate))< 30)
-							return "#A3A3A3";
+						if((x(d.enddate) - x(d.startdate))< 100)
+							return "#c9c9c9";
 						else
 							return "white";
 					});
